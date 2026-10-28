@@ -1,10 +1,12 @@
 class Teilnehmer {
     final String name;
     final int alter;
-    Teilnehmer(this.alter, this.name);
+    final String? email;
+    Teilnehmer(this.alter, this.name, this.email);
 
     Teilnehmer copyWith({int? alter, String? name}) {
-        return Teilnehmer(alter  ?? this.alter, name ?? this.name);
+        return Teilnehmer(alter  ?? this.alter, name ?? this.name, email ?? this.email);
     }
+    
 }
 
